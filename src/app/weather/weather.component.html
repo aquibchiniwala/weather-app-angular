@@ -1,0 +1,16 @@
+<div class="container" style="width: 80%;padding: 0%">
+    <h1 style="text-align: center; color: orange;">Satik Weather App</h1>
+    <div class="input-group search-box">
+        <input type="text" class="form-control" placeholder="Search City" [(ngModel)]="city">
+        <div class="input-group-btn">
+            <button class="btn btn-default" (click)="getCurrentWeather(city)">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </div>
+    </div>
+    <app-current-weather [weather]="weather"></app-current-weather>
+    <!-- loop for five days -->
+    <div *ngFor='let forecast of forecasts'>
+        <app-day-expansion [forecast]="forecast"></app-day-expansion>
+    </div>
+</div>

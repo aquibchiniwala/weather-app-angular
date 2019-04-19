@@ -1,1 +1,290 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    /*border: 1px solid #999;*/
+  }
+  
+  body {
+    font-family: Roboto, Arial;
+    font-size: 0.8em;
+    color: #666;
+    background: url('../src/assets/background-body.png');
+    background-repeat: repeat;
+    background-size: auto;
+  }
+  
+  .icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+  }
+  
+  /* .icon.rain {
+    background-image: url('rain.png');
+  }
+  
+  .icon.sunny {
+    background-image: url('sunny.png');
+  }
+  
+  .icon.pc {
+    background-image: url('partly_cloudy.png');
+  }
+  
+  .icon.sshowers {
+    background-image: url('rain_s_cloudy.png');
+  }
+  
+  .icon.cloudy {
+    background-image: url('cloudy.png');
+  }
+  
+  .icon.thunder {
+    background-image: url('thunderstorms.png');
+  } */
+  
+  .weather-forecast {
+    padding: 10px 10px 0 10px;
+    display: inline-block;
+    
+  }
+  
+  /* Header row */
+  
+  .location {
+    font-size: 3em;
+    color: black;
+  }
+  
+  .date {
+  color: black;
+  }
+  
+  .desc {
+  color: black;
+  }
+  
+  /* Current Weather Summary */
+  .current {
+    overflow: auto;
+    width:100%;
+    margin-bottom: 15px;
+  }
+  
+  .current .visual {
+    width: 50%;
+    float: left;
+  }
+  
+  .current .description {
+    width: 50%;
+    float: left;
+  }
+  
+  /* Current Weather - Visual */
+  
+  .visual .icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .temp {
+    font-size: 2.5em;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .scale {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 6px;
+    color: #888;
+  }
+  
+  /* General Labels */
+  
+  .wind:before {
+    content: "Wind: ";
+    color: black;
+  }
+  
+  .minTemp:before {
+    content: "Min Temperature: ";
+    color: black;
+  }
+
+  .maxTemp:before {
+    content: "Max Temperature: ";
+    color: black;
+  }
+  
+  .humidity:before {
+    content: "Humidity: ";
+    color: black;
+  }
+  
+  .pollen:before {
+    content: "Pollen Count: ";
+    color: #888;
+  }
+  
+  .pcount:before {
+    content: "Pollen ";
+    color: #888;
+  }
+  
+  
+  /* Seven Day Forecast */
+  
+  .seven-day div {
+    vertical-align: middle;
+  }
+  
+  .seven-day-fc {
+    
+    margin: 0 -11px -1px -11px;
+    padding: 10px;
+  }
+  
+  .seven-day-fc div {
+    display: inline-block;
+  }
+  
+  .seven-day-fc .date {
+    font-weight: bold;
+    color: black;
+  }
+  
+  .seven-day-fc .icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .seven-day-fc .seven-day-temp {
+    text-align: center;
+  }
+  
+  .seven-day-fc .temp-high {
+    color: #444;
+  
+  }
+  
+  .seven-day-fc .temp-low {
+    color: #888;
+  }
+  
+  .seven-day-fc .temp-low,
+  .seven-day-fc .temp-high {
+    display: block;
+  }
+  
+  .seven-day-fc .pcount {
+    text-align: center;
+  }
+  .search-box{
+    width: 50%;
+    margin: 1% auto 1% auto;
+  }
+
+  
+@media (min-width:601px){
+    body {
+      font-size: 1.0em;
+    }
+  
+    .weather-forecast {
+      width: 100%;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+  
+  
+    .seven-day-fc {
+      display: inline-block;
+      width: 13.5%;
+      margin: 0;
+      border: none;
+      font-size: 0.8em;
+    }
+  
+    .seven-day-fc div {
+      display: block;
+      text-align: center;
+    }
+  
+    .seven-day-fc .date {
+      text-align: center;
+    }
+  
+    .seven-day-fc .temp-low,
+    .seven-day-fc .temp-high {
+      display: inline;
+    }
+  
+    .seven-day-fc .seven-day-temp {
+      font-size: 1.25em;
+    }
+  
+    .seven-day-fc .icon {
+      width: 64px;
+      height: 64px;
+    }
+    .search-box{
+      width: 50%;
+      margin: 1% auto 1% auto;
+    }
+  }
+  
+
+  @media (max-width:600px){
+    .weather-forecast {
+      width: 100%;
+    }
+  
+    .seven-day-fc {
+      border-top: 1px solid rgba(0,0,0,0.2);
+    }
+  
+    .seven-day-fc:last-of-type {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+  
+    .seven-day-fc .date {
+      width: 30%;
+    }
+  
+    .seven-day-fc .seven-day-temp {
+      width: 30%;
+    }
+  
+    .seven-day-fc .pcount {
+      width: 16%;
+    }
+    .search-box{
+      width: auto;
+      margin: 1% auto 1% auto;
+    }
+  }  
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* background-color: DodgerBlue; */
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    /* width: 100px; */
+    margin: 5px 5px -25px 5px;
+    text-align: center;
+    /* line-height: 75px;
+    font-size: 30px; */
+  }
+
+  div.background {
+    background: url(../src/assets/background-current.png) repeat;
+    border: 1px solid grey;
+  }

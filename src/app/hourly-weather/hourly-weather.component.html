@@ -1,0 +1,10 @@
+<div class="seven-day">
+  <div class="seven-day-fc">
+    <div class="date">{{forecast.data.dateTime | date:'shortTime'}}</div>
+    <div class="icon" [ngStyle]="{'background-image': 'url('+forecast.data.icon+')'}"></div>
+    <div class="seven-day-temp">
+      <div class="temp-high">{{forecast.data.maxTemp| number:'1.1-1'}}&deg;C  </div>
+      <div class="temp-low">{{forecast.data.minTemp | number:'1.1-1'}}&deg;C</div>
+    </div>
+  </div>
+</div>
