@@ -1,20 +1,20 @@
 <div class="background">
   <div class="transbox">
-    <div class="weather-forecast" role="main" *ngIf="weather.city">
-      <div class="location">{{weather.city}}</div>
-      <div class="date">{{weather.date | date:'EEEE, MMMM d'}}</div>
-      <div class="desc">{{weather.weather}}, {{weather.desc}}</div>
+    <div class="weather-forecast" role="main" *ngIf="weather?.city">
+      <div class="location">{{weather?.city}}</div>
+      <div class="date">{{weather?.date | date:'EEEE, MMMM d'}}</div>
+      <div class="desc">{{weather?.weather}}, {{weather.desc}}</div>
       <div class="current">
         <div class="visual">
-          <div class="icon" [ngStyle]="{'background-image': 'url('+weather.icon+')'}"></div>
-          <div class="temp">{{weather.temp | number:'1.1-1'}}</div>
+          <div class="icon" [ngStyle]="{'background-image': 'url('+weather?.icon+')'}"></div>
+          <div class="temp">{{weather?.temp | number:'1.1-1'}}</div>
           <div class="scale">&deg;C</div>
         </div>
         <div class="description">
-          <div class="minTemp">{{weather.minTemp | number:'1.1-1'}}&deg;C</div>
-          <div class="maxTemp">{{weather.maxTemp | number:'1.1-1'}}&deg;C</div>
-          <div class="humidity">{{weather.humidity}}%</div>
-          <div class="wind">{{weather.wind}} km/h</div>
+          <div class="minTemp">{{weather?.minTemp | number:'1.1-1'}}&deg;C</div>
+          <div class="maxTemp">{{weather?.maxTemp | number:'1.1-1'}}&deg;C</div>
+          <div class="humidity">{{weather?.humidity}}%</div>
+          <div class="wind">{{weather?.wind}} km/h</div>
         </div>
       </div>
     </div>
