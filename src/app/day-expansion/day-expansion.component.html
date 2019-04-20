@@ -5,14 +5,14 @@
    <mat-expansion-panel-header class="forecast-row">
       <mat-panel-title>
          <strong>
-            <span *ngIf='forecast.date===today'>Today</span>
-            <span *ngIf='forecast.date!=today'>{{forecast.date | date:'EEEE'}}</span>
+            <span *ngIf='forecast?.date===today'>Today</span>
+            <span *ngIf='forecast?.date!=today'>{{forecast?.date | date:'EEEE'}}</span>
          </strong>
       </mat-panel-title>
    </mat-expansion-panel-header>
    <!-- loop for 8 forecasts per day -->
    <div class="flex-container">
-      <div *ngFor='let fc of forecast.hourlyWeather'>
+      <div *ngFor='let fc of forecast?.hourlyWeather'>
             <app-hourly-weather [forecast]="fc"></app-hourly-weather>
       </div>
    </div>
