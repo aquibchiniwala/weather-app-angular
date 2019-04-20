@@ -11,7 +11,7 @@ export class WeatherComponent {
   @Input()
   city: string;
 
-  weather: object = {};
+  weather: any;
   forecasts: Array<any> = new Array<any>();
 
   constructor(private service: WeatherService) { }

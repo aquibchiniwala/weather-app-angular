@@ -8,8 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CurrentWeatherComponent implements OnInit {
 
   @Input()
-  public weather: object;
-  constructor() { }
+  weather: any;
+  constructor() {
+  }
 
   ngOnInit() {
   }

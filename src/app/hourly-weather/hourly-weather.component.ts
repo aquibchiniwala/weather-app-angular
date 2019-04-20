@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HourlyWeatherComponent implements OnInit {
   @Input()
-  forecast: object;
+  forecast: any;
   constructor() { }
 
   ngOnInit() {

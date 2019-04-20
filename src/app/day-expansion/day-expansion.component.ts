@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DayExpansionComponent implements OnInit {
 
   @Input()
-  forecast: object;
+  forecast: any;
   today: string = new Date().toDateString();
   constructor() { }
 
