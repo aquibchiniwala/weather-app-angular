@@ -5,7 +5,7 @@
    <mat-expansion-panel-header class="forecast-row">
       <mat-panel-title>
          <strong>
-            <span *ngIf='forecast?.date===today'>Todayyyyyy</span>
+            <span *ngIf='forecast?.date===today'>Today</span>
             <span *ngIf='forecast?.date!=today'>{{forecast?.date | date:'EEEE'}}</span>
          </strong>
       </mat-panel-title>
